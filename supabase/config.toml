@@ -1,0 +1,9 @@
+# Configuración mínima para desplegar la Edge Function `admin-usuarios`.
+# El resto de la configuración local usa los valores por defecto del CLI.
+project_id = "uubzvrkqkzcuiqffrgus"
+
+[functions.admin-usuarios]
+# La función valida el JWT y el rol de admin manualmente. Se desactiva la
+# verificación del gateway para que el preflight CORS (OPTIONS) llegue a la
+# función; las acciones igual exigen un token válido de un admin activo.
+verify_jwt = false
